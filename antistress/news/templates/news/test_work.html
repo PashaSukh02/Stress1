@@ -1,0 +1,52 @@
+{% extends 'main/base.html' %}
+
+{% block title %}{{ article.title }}{% endblock %}
+
+{% block content %}
+    <div class="features">
+
+        {% if tests %}
+        <form method="post" id="data">
+            {% csrf_token %}
+            {% for el in tests %}
+                <div class="alert alert-info">
+                    <h5>{{el.anons}}</h5>
+                    <select class="form-select" aria-label="Default select example" form="data" id="select">
+                          {{form}}
+                        <option value="{{el.pr1}}">{{el.ans1}}</option>
+                        <option value="{{el.pr2}}">{{el.ans2}}</option>
+                        <option value="{{el.pr3}}">{{el.ans3}}</option>
+                    </select>
+                </div>
+            {% endfor %}
+            <button class="btn btn-success" onclick="alertNum()" >Отправить ответ</button>
+        </form>
+        {% else %}
+         <p> У вас нет записей</p>
+        {% endif %}
+        <script>
+            async function alertNum() {
+
+                let x=0;
+                let num = document.getElementsByClassName('form-select');
+                for (index = 0; index < num.length; ++index) {
+                    x+=parseInt(num[index].value);
+                }
+                alert(x);
+                if (x<30){
+                window.location.href = 'http://127.0.0.1:8000/news/result1';
+                }
+                else if(x<47){
+                window.location.href = 'http://127.0.0.1:8000/news/result2';
+                }
+                else{
+                    window.location.href = 'http://127.0.0.1:8000/news/result3';
+                }
+                alert(4);
+
+
+
+            }
+        </script>
+    </div>
+{% endblock %}

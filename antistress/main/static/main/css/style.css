@@ -1,0 +1,108 @@
+body{
+background: url('https://catherineasquithgallery.com/uploads/posts/2021-02/1614434684_11-p-fon-temno-zelenikh-listev-15.jpg') no-repeat ;
+background-size:100%;
+background-attachment: fixed;
+}
+aside{
+    position: fixed;
+    float: left;
+    background-color: #0D3422;
+    width: 20%;
+    padding: 2.5%;
+    height: 100vh;
+    color: #fff;
+    border-right: 5px solid #000000;
+}
+body{font-family: Courier, monospace}
+aside img{
+    width: 20px;
+    float: left;
+}
+
+aside .logo{
+    font-size: 40px;
+    margin-left: 30px;
+    text-decoration: line-through;
+}
+
+aside h3{
+    margin-left:20px;
+    margin-top: 50px;
+    font-size: 28px;
+
+}
+
+aside ul{
+list-style: none;
+}
+aside ul li{
+    color: #fff;
+    display: block;
+    margin-top:20px;
+    transform: all .6s .easy;
+}
+
+aside ul li:hover, aside ul a:hover{
+    color: #eb5959;
+    text-decoration: none;
+    transform: scale(1.05);
+}
+
+main .features{
+    float: left;
+    color: #fff;
+    margin-top:50px;
+    padding-left: 35%;
+    text-align: center;
+    weight:75%
+    }
+main .features h1{ font-size: 50px;}
+main .features p{ width: 100%; margin 20px auto;}
+news {
+padding-left: 45%;
+}
+main .featuresNews{
+float: left;
+    color: #fff;
+    margin-top:50px;
+    padding-left: 45%;
+    text-align: center;
+    weight:75%
+}
+.alert-warning{
+    clear:born;
+    width:400px;
+    margin: 20px 0;
+    text-align:center;
+}
+.alert p{width:100%}
+form{
+    margin-left: 15%;
+    width:500px;
+    margin-top: 50px;
+}
+.alert-info{
+--bs-alert-color: #fff;
+--bs-alert-bg: #1d7804;
+--bs-alert-border-color: #000;
+}
+.alert-warning{
+--bs-alert-color: #000;
+--bs-alert-bg: #C6E3A9;
+--bs-alert-border-color: #000;
+}
+
+
+#index p{
+max-width:750px}
+
+#adobe{
+float: left;
+color: #fff;
+margin-top: 50px;
+padding-left: 20%;
+text-align: center;
+}
+#res1,#res2,#res3{
+    right:100px
+}

@@ -1,0 +1,27 @@
+{% extends 'main/base.html' %}
+
+{% block title %}Форма по добавлению тестов{% endblock %}
+
+{% block content %}
+    <dib class="features">
+       <h1> Форма по добавлению вопроса</h1>
+
+        <form  method="post">
+
+            {% csrf_token %}
+
+            {{form.title}}<br>
+            {{form.anons}}<br>
+            {{form.full_text}}<br>
+            {{form.ans1}}<br>
+            {{form.pr1}}<br>
+            {{form.ans2}}<br>
+            {{form.pr2}}<br>
+            {{form.ans3}}<br>
+            {{form.pr3}}<br>
+            {{form.date}}<br>
+            <span>{{error}}</span>
+            <button class="btn btn-success" type="submit"> Добавить тест</button>
+        </form>
+    </dib>
+{% endblock %}
