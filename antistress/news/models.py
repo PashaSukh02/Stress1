@@ -17,7 +17,7 @@ class Test(models.Model):
         return self.anons
 
     def get_absolute_url(self):
-        return f'/test/{self.id}'
+        return f'/news/{self.id}'
 
     class Meta:
         verbose_name = 'Вопрос'
