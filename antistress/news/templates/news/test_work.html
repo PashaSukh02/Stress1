@@ -19,30 +19,33 @@
                     </select>
                 </div>
             {% endfor %}
-            <button class="btn btn-success" onclick="alertNum()" >Отправить ответ</button>
-        </form>
+            </form>
+            <button onclick="alertNum()" >Отправить ответ</button>
         {% else %}
          <p> У вас нет записей</p>
         {% endif %}
         <script>
-            async function alertNum() {
+             function alertNum() {
 
                 let x=0;
                 let num = document.getElementsByClassName('form-select');
                 for (index = 0; index < num.length; ++index) {
                     x+=parseInt(num[index].value);
                 }
-                alert(x);
+
+
                 if (x<30){
-                window.location.href = 'http://127.0.0.1:8000/news/result1';
+
+                    window.location.href = ("http://127.0.0.1:8000{% url 'result1' %}");
                 }
                 else if(x<47){
-                window.location.href = 'http://127.0.0.1:8000/news/result2';
+
+                    window.location.href = ("http://127.0.0.1:8000{% url 'result2' %}");
                 }
                 else{
-                    window.location.href = 'http://127.0.0.1:8000/news/result3';
+                   window.location.href = ("http://127.0.0.1:8000{% url 'result3' %}");
                 }
-                alert(4);
+
 
 
 
