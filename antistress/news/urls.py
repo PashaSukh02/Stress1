@@ -10,6 +10,6 @@ urlpatterns = [
     path('tests', views.test_work, name='tests_work'),
     path('result1', views.index1, name='result1'),
     path('result2', views.index2, name='result2'),
-    path('result3', views.index3, name='result2'),
+    path('result3', views.index3, name='result3'),
 
 ]
